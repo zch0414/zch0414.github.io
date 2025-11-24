@@ -81,12 +81,12 @@ While HLIP uses the external Pub-Brain-5 dataset to ablate different model desig
 <div class="figure-row">
   <div class="figure">
     <img src="images/ct.png" alt="ct">
-    <div class="figure-caption">reimplementation on headct240K</div>
+    <div class="figure-caption">reimplementation on HeadCT240K</div>
   </div>
 
   <div class="figure">
     <img src="images/mri.png" alt="mri">
-    <div class="figure-caption">reimplementation on brainmri220K</div>
+    <div class="figure-caption">reimplementation on BrainMRI220K</div>
   </div>
 
   <div class="figure figure-empty">
@@ -152,12 +152,12 @@ All three experiments are conducted on the BrainMRI220K dataset.
 <div class="figure-row">
   <div class="figure">
     <img src="images/ct&mri vs ct.png" alt="ct&mri vs ct">
-    <div class="figure-caption">ct&mri ct</div>
+    <div class="figure-caption">ct&mri (green) vs ct only</div>
   </div>
 
   <div class="figure">
     <img src="images/ct&mri vs mri.png" alt="ct&mri vs mri">
-    <div class="figure-caption">ct&mri vs mri</div>
+    <div class="figure-caption">ct&mri (green) vs mri only</div>
   </div>
 
   <div class="figure figure-empty">
@@ -174,12 +174,12 @@ Keeping all five subtle but meaningful changes, we train HLIP on the combined Br
 <div class="figure-row">
   <div class="figure">
     <img src="images/ct&mri sentence dropout (ct).png" alt="sentence dropout ct">
-    <div class="figure-caption">sentence dropout (ct)</div>
+    <div class="figure-caption">sentence dropout (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/ct&mri sentence dropout (mri).png" alt="sentence dropout mri">
-    <div class="figure-caption">sentence dropout (mri)</div>
+    <div class="figure-caption">sentence dropout (solid)</div>
   </div>
 
   <div class="figure figure-empty">
@@ -196,12 +196,12 @@ Image captions used in the original CLIP are very short, whereas radiology repor
 <div class="figure-row">
   <div class="figure">
     <img src="images/ct&mri unmasked finetune (ct).png" alt="unmasked finetune ct">
-    <div class="figure-caption">unmasked finetune (ct)</div>
+    <div class="figure-caption">unmasked finetune (deep green)</div>
   </div>
 
   <div class="figure">
     <img src="images/ct&mri unmasked finetune (mri).png" alt="unmasked finetune mri">
-    <div class="figure-caption">unmasked finetune (mri)</div>
+    <div class="figure-caption">unmasked finetune (deep green)</div>
   </div>
 
   <div class="figure figure-empty">
@@ -237,22 +237,22 @@ We evaluate this new model on Pub-Brain-5’s anomaly detection task and on the 
 <div class="figure-row">
   <div class="figure">
     <img src="images/ct report (gpt3.5turbo -> gpt4omini).png" alt="ct report 4o mini">
-    <div class="figure-caption">gpt3.5turbo vs gpt4omini (ct)</div>
+    <div class="figure-caption">gpt3.5turbo vs gpt4omini (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/ct report (gpt3.5turbo -> gpt4.1mini).png" alt="ct report 4.1 mini">
-    <div class="figure-caption">gpt3.5turbo vs gpt4.1mini (ct)</div>
+    <div class="figure-caption">gpt3.5turbo vs gpt4.1mini (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/mri report (gpt3.5turbo -> gpt4omini).png" alt="mri report 4o mini">
-    <div class="figure-caption">gpt3.5turbo vs gpt4omini (mri)</div>
+    <div class="figure-caption">gpt3.5turbo vs gpt4omini (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/mri report (gpt3.5turbo -> gpt4.1mini).png" alt="mri report 4.1 mini">
-    <div class="figure-caption">gpt3.5turbo vs gpt4.1mini (mri)</div>
+    <div class="figure-caption">gpt3.5turbo vs gpt4.1mini (solid)</div>
   </div>
 </div>
 
@@ -261,12 +261,12 @@ Here, we report a phenomenon observed when supervising with LLM-summarized repor
 <div class="figure-row">
   <div class="figure">
     <img src="images/ct&mri sentence dropout report (gpt3.5turbo -> gpt4omini) (ct).png" alt="ct sentence dropout report 4o mini">
-    <div class="figure-caption">sentence dropout (gpt4omini ct)</div>
+    <div class="figure-caption">gpt4omini w/ sentence dropout (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/ct&mri sentence dropout report (gpt3.5turbo -> gpt4omini) (mri).png" alt="mri sentence dropout report 4o mini">
-    <div class="figure-caption">sentence dropout (gpt4omini mri)</div>
+    <div class="figure-caption">gpt4omini w/ sentence dropout (solid)</div>
   </div>
 
   <div class="figure figure-empty">
@@ -283,22 +283,22 @@ We find that with sentence dropout, this issue can be largely alleviated.
 <div class="figure-row">
   <div class="figure">
     <img src="images/fail mri initialization (avg -> central).png" alt="initialization">
-    <div class="figure-caption">patch embedding initialization (average → central)</div>
+    <div class="figure-caption">patch embedding initialization average → central (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/fail mri patch size (8,16,16 -> 8,14,14).png" alt="smaller patch size">
-    <div class="figure-caption">patch size [8, 16, 16] → [8, 14, 14]</div>
+    <div class="figure-caption">patch size [8, 16, 16] → [8, 14, 14] (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/fail ct&mri rope (ct).png" alt="rope ct">
-    <div class="figure-caption">rotary position embedding (ct)</div>
+    <div class="figure-caption">rotary position embedding (solid)</div>
   </div>
 
   <div class="figure">
     <img src="images/fail ct&mri rope (mri).png" alt="rope mri">
-    <div class="figure-caption">rotary position embedding (mri)</div>
+    <div class="figure-caption">rotary position embedding (solid)</div>
   </div>
 </div>
 

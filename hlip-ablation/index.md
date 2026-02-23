@@ -303,8 +303,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
     <tbody>
       <tr>
         <td>in the paper</td>
-        <td></td>
-        <td></td>
+        <td> -- </td>
+        <td> -- </td>
         <td>91.5</td>
         <td>89.2</td>
         <td>79.2</td>
@@ -319,8 +319,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
       </tr>
       <tr>
         <td>2025-10-08</td>
-        <td></td>
-        <td></td>
+        <td>89.1</td>
+        <td>89.1</td>
         <td>94.8</td>
         <td>94.8</td>
         <td>86.0</td>
@@ -337,65 +337,65 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>ViT Base<br>(scan + study)</td>
         <td></td>
         <td></td>
-        <td>94.8</td>
-        <td>94.8</td>
-        <td>86.0</td>
-        <td>86.2</td>
-        <td>90.5</td>
-        <td>93.5</td>
-        <td>96.4</td>
-        <td>90.2</td>
-        <td>89.1</td>
-        <td>90.8</td>
-        <td>92.0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>ViT Base<br>(slice + scan + study)</td>
         <td></td>
         <td></td>
-        <td>94.8</td>
-        <td>94.8</td>
-        <td>86.0</td>
-        <td>86.2</td>
-        <td>90.5</td>
-        <td>93.5</td>
-        <td>96.4</td>
-        <td>90.2</td>
-        <td>89.1</td>
-        <td>90.8</td>
-        <td>92.0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>ViT Large<br>(scan + study)</td>
         <td></td>
         <td></td>
-        <td>94.8</td>
-        <td>94.8</td>
-        <td>86.0</td>
-        <td>86.2</td>
-        <td>90.5</td>
-        <td>93.5</td>
-        <td>96.4</td>
-        <td>90.2</td>
-        <td>89.1</td>
-        <td>90.8</td>
-        <td>92.0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>ViT Large<br>(slice + scan + study)</td>
         <td></td>
         <td></td>
-        <td>94.8</td>
-        <td>94.8</td>
-        <td>86.0</td>
-        <td>86.2</td>
-        <td>90.5</td>
-        <td>93.5</td>
-        <td>96.4</td>
-        <td>90.2</td>
-        <td>89.1</td>
-        <td>90.8</td>
-        <td>92.0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

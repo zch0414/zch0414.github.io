@@ -77,7 +77,7 @@ layout: null
   }
 
   .paper-table col.metric-col {
-    width: calc(82% / 11);
+    width: calc(82% / 13);
   }
 
   .paper-table th,
@@ -99,15 +99,21 @@ layout: null
   }
 
   .paper-table thead tr:first-child th.group-pub::after,
-  .paper-table thead tr:first-child th.group-rsna::after {
+  .paper-table thead tr:first-child th.group-rsna::after,
+  .paper-table thead tr:first-child th.group-prospective::after {
     content: "";
     position: absolute;
     bottom: 0;
     border-bottom: 1px solid #aaa;
   }
 
-  .paper-table thead tr:first-child th.group-pub::after {
+  .paper-table thead tr:first-child th.group-prospective::after {
     left: 4px;
+    right: 10px;
+  }
+
+  .paper-table thead tr:first-child th.group-pub::after {
+    left: 10px;
     right: 10px;
   }
 
@@ -267,16 +273,20 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
   <table class="paper-table">
     <colgroup>
       <col class="model-col">
+      <col class="metric-col"><col class="metric-col">
       <col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col">
       <col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col">
     </colgroup>
     <thead>
       <tr>
         <th rowspan="2">Model</th>
+        <th colspan="2" class="group-prospective">Prospective</th>
         <th colspan="5" class="group-pub">Pub-Brain-5 (Anomaly Detection)</th>
         <th colspan="6" class="group-rsna">RSNA (Full Set)</th>
       </tr>
       <tr>
+        <th>CT</th>
+        <th>MRI</th>
         <th>STR</th>
         <th>GLI</th>
         <th>MEN</th>
@@ -293,6 +303,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
     <tbody>
       <tr>
         <td>in the paper</td>
+        <td></td>
+        <td></td>
         <td>91.5</td>
         <td>89.2</td>
         <td>79.2</td>
@@ -307,6 +319,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
       </tr>
       <tr>
         <td>2025-10-08</td>
+        <td></td>
+        <td></td>
         <td>94.8</td>
         <td>94.8</td>
         <td>86.0</td>
@@ -320,7 +334,9 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>92.0</td>
       </tr>
       <tr>
-        <td>ViT Base (scan + study)</td>
+        <td>ViT Base<br>(scan + study)</td>
+        <td></td>
+        <td></td>
         <td>94.8</td>
         <td>94.8</td>
         <td>86.0</td>
@@ -334,7 +350,9 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>92.0</td>
       </tr>
       <tr>
-        <td>ViT Base (slice + scan + study)</td>
+        <td>ViT Base<br>(slice + scan + study)</td>
+        <td></td>
+        <td></td>
         <td>94.8</td>
         <td>94.8</td>
         <td>86.0</td>
@@ -348,7 +366,9 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>92.0</td>
       </tr>
       <tr>
-        <td>ViT Large (scan + study)</td>
+        <td>ViT Large<br>(scan + study)</td>
+        <td></td>
+        <td></td>
         <td>94.8</td>
         <td>94.8</td>
         <td>86.0</td>
@@ -362,7 +382,9 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>92.0</td>
       </tr>
       <tr>
-        <td>ViT Large (slice + scan + study)</td>
+        <td>ViT Large<br>(slice + scan + study)</td>
+        <td></td>
+        <td></td>
         <td>94.8</td>
         <td>94.8</td>
         <td>86.0</td>

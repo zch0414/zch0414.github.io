@@ -303,8 +303,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
     <tbody>
       <tr>
         <td>in the paper</td>
-        <td> -- </td>
-        <td> -- </td>
+        <td>75.9</td>
+        <td>81.1</td>
         <td>91.5</td>
         <td>89.2</td>
         <td>79.2</td>

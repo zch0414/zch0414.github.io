@@ -512,24 +512,20 @@ We introduce four designs that we find do not provide benefits in our current se
 <div class="citation-block">
 <p>If this blog or the HLIP work is useful in your research, please consider citing:</p>
 
-```bibtex
-@article{zhao2026towards,
+<pre><code>@article{zhao2026towards,
   title={Towards Scalable Language-Image Pre-training for 3D Medical Imaging},
   author={Chenhui Zhao and Yiwei Lyu and Asadur Zaman Chowdury and Edward S Harake and Akhil Kondepudi and Akshay T Rao and Xinhai Hou and Honglak Lee and Todd C Hollon},
   journal={Transactions on Machine Learning Research},
   issn={2835-8856},
   year={2026},
   url={https://openreview.net/forum?id=WxHf4EcBWA}
-}
-```
+}</code></pre>
 
-```bibtex
-@misc{zhao2026hlipablationblog,
+<pre><code>@misc{zhao2026hlipablationblog,
   author = {Chenhui Zhao},
   title = {HLIP Ablation},
   year = {2026},
   url = {https://zch0414.github.io/hlip-ablation/},
   note = {Accessed: 2026-02-23}
-}
-```
+}</code></pre>
 </div>

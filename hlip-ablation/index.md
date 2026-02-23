@@ -138,6 +138,27 @@ layout: null
   .paper-table tbody tr:last-child td {
     border-bottom: 1.5px solid #222;
   }
+
+  .citation-block {
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    background: #f6f8fa;
+    padding: 14px 16px;
+    margin: 0.75rem 0 1rem;
+  }
+
+  .citation-block p {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .citation-block pre {
+    margin: 0.6rem 0;
+    background: #fff;
+    border: 1px solid #d8dee4;
+    border-radius: 6px;
+    padding: 10px 12px;
+    overflow-x: auto;
+  }
 </style>
 
 # HLIP Ablation
@@ -488,7 +509,8 @@ We introduce four designs that we find do not provide benefits in our current se
 
 ## Citation
 
-If this blog or the HLIP work is useful in your research, please consider citing:
+<div class="citation-block">
+<p>If this blog or the HLIP work is useful in your research, please consider citing:</p>
 
 ```bibtex
 @article{zhao2026towards,
@@ -510,3 +532,4 @@ If this blog or the HLIP work is useful in your research, please consider citing
   note = {Accessed: 2026-02-23}
 }
 ```
+</div>

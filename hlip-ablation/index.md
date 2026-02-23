@@ -283,7 +283,7 @@ Image captions used in the original CLIP are short, often fewer than 60 words, w
   </div>
 </div>
 
-One limitation of sentence dropout is that it can destabilize training. In practice, to ensure stable optimization, we must use a smaller learning rate (from 6e-4 to 4e-4). This instability increases the risk when scaling to a ViT-Large model, which is typically more difficult to train than a ViT-Base model. To improve training stability and avoid unnecessary hyperparameter tuning when training ViT-Large, we introduce a dual contrastive loss, following the strategy proposed in [TIPS](https://arxiv.org/abs/2410.16512). Specifically, at each step, we introduce two CLS tokens in the ViT architecture and contrast them with a randomly selected sentence and the full report, respectively.We observe faster convergence for the sentence contrastive loss. Intuitively, the model learns global features from sentence supervision and dense features from full-report supervision.
+One limitation of sentence dropout is that it can destabilize training. In practice, to ensure stable optimization, we must use a smaller learning rate (from 6e-4 to 4e-4). This instability increases the risk when scaling to a ViT-Large model, which is typically more difficult to train than a ViT-Base model. To improve training stability and avoid unnecessary hyperparameter tuning when training ViT-Large, we introduce a dual contrastive loss, following the strategy proposed in [TIPS](https://arxiv.org/abs/2410.16512). Specifically, at each step, we introduce two CLS tokens in the ViT architecture and contrast them with a randomly selected sentence and the full report, respectively. We observe faster convergence for the sentence contrastive loss. Intuitively, the model learns global features from sentence supervision and dense features from full-report supervision.
 
 ## Models
 Building on the incremental designs introduced so far, we train four HLIP variants: (1) ViT-Base with scan attention (block indices: 0, 1, 3, 4, 6, 7, 9, 10) and study attention (block indices: 2, 5, 8, 11); (2) ViT-Base with slice attention (block indices: 0, 3, 6, 9), scan attention (block indices: 1, 4, 7, 10), and study attention (block indices: 2, 5, 8, 11); (3) ViT-Large with scan attention (block indices: 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22) and study attention (block indices: 5, 11, 17, 23); and (4) ViT-Large with slice attention (block indices: 0, 1, 2, 3, 6, 7, 8, 9, 12, 13, 14, 15, 18, 19, 20, 21), scan attention (block indices: 4, 10, 16, 22), and study attention (block indices: 5, 11, 17, 23).
@@ -356,19 +356,19 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
       </tr>
       <tr>
         <td>ViT Base<br>(scan + study)</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>89.2</td>
+        <td>88.9</td>
+        <td>93.3</td>
+        <td>98.5</td>
+        <td>87.6</td>
+        <td>87.9</td>
+        <td>91.8</td>
+        <td>93.4</td>
+        <td>96.7</td>
+        <td>90.1</td>
+        <td>89.2</td>
+        <td>93.4</td>
+        <td>92.7</td>
       </tr>
       <tr>
         <td>ViT Base<br>(slice + scan + study)</td>
@@ -390,33 +390,33 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>ViT Large<br>(scan + study)</td>
         <td>89.0</td>
         <td>89.7</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>92.5</td>
+        <td>99.6</td>
+        <td>83.7</td>
+        <td>84.8</td>
+        <td>90.2</td>
+        <td>94.1</td>
+        <td>96.8</td>
+        <td>91.1</td>
+        <td>87.9</td>
+        <td>94.6</td>
+        <td>92.9</td>
       </tr>
       <tr>
         <td>ViT Large<br>(slice + scan + study)</td>
         <td>89.6</td>
         <td>89.6</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>94.9</td>
+        <td>99.1</td>
+        <td>86.5</td>
+        <td>85.7</td>
+        <td>91.5</td>
+        <td>94.2</td>
+        <td>96.9</td>
+        <td>91.2</td>
+        <td>89.0</td>
+        <td>94.1</td>
+        <td>93.1</td>
       </tr>
     </tbody>
   </table>

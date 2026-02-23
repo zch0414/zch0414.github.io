@@ -105,7 +105,7 @@ layout: null
 </style>
 
 # HLIP Ablation
-2025-10-08 (updated 2026-02-22) · Chenhui Zhao · MLiNS @ Univeristy of Michigan
+2025-11-17 (updated 2026-02-22) · Chenhui Zhao · MLiNS @ Univeristy of Michigan
 
 In [HLIP](https://arxiv.org/abs/2505.21862), we present a language–image pre-training framework designed for uncurated 3D medical data that incorporates a hierarchical attention mechanism. HLIP achieves state-of-the-art results on both curated and uncurated 3D medical datasets spanning brain MRI, head CT, and chest CT. We attribute these gains to the effective modeling, careful implementation, and scalability. In this blog, building on HLIP's conclusions and implementation, we push scalability one step further for uncurated 3D medical data. To this end, **we conduct five ablation studies that appear not to improve performance yet are crucial for scalability and for advancing vision–language modeling, including visual instruction tuning.** This yields new HLIP models trained on the combined BrainMRI220K and HeadCT240K datasets. We further introduce a **simple yet effective adjustment to the language supervision, resulting in updated HLIP models.**
 

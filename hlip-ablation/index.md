@@ -367,8 +367,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
       </tr>
       <tr>
         <td>ViT Large<br>(scan + study)</td>
-        <td></td>
-        <td></td>
+        <td>89.0</td>
+        <td>89.7</td>
         <td></td>
         <td></td>
         <td></td>
@@ -383,8 +383,8 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
       </tr>
       <tr>
         <td>ViT Large<br>(slice + scan + study)</td>
-        <td></td>
-        <td></td>
+        <td>89.6</td>
+        <td>89.6</td>
         <td></td>
         <td></td>
         <td></td>

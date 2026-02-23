@@ -72,8 +72,12 @@ layout: null
     font-size: 0.9rem;
   }
 
-  .paper-table col {
-    width: calc(100% / 12);
+  .paper-table col.model-col {
+    width: 18%;
+  }
+
+  .paper-table col.metric-col {
+    width: calc(82% / 11);
   }
 
   .paper-table th,
@@ -86,13 +90,39 @@ layout: null
 
   .paper-table thead tr:first-child th {
     border-top: 1.5px solid #222;
-    border-bottom: 1px solid #aaa;
     font-weight: 600;
+    position: relative;
+  }
+
+  .paper-table thead tr:first-child th[colspan] {
+    border-bottom: none;
+  }
+
+  .paper-table thead tr:first-child th.group-pub::after,
+  .paper-table thead tr:first-child th.group-rsna::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #aaa;
+  }
+
+  .paper-table thead tr:first-child th.group-pub::after {
+    left: 4px;
+    right: 10px;
+  }
+
+  .paper-table thead tr:first-child th.group-rsna::after {
+    left: 10px;
+    right: 4px;
   }
 
   .paper-table thead tr:last-child th {
     border-bottom: 1.5px solid #222;
     font-weight: 600;
+  }
+
+  .paper-table thead th[rowspan] {
+    border-bottom: 1.5px solid #222;
   }
 
   .paper-table tbody tr td {
@@ -236,26 +266,28 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
 <div class="paper-table-wrap">
   <table class="paper-table">
     <colgroup>
-      <col><col><col><col><col><col><col><col><col><col><col><col>
+      <col class="model-col">
+      <col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col">
+      <col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col"><col class="metric-col">
     </colgroup>
     <thead>
       <tr>
         <th rowspan="2">Model</th>
-        <th colspan="5">Pub-Brain-5 (Anomaly Detection)</th>
-        <th colspan="6">RSNA (Full Set)</th>
+        <th colspan="5" class="group-pub">Pub-Brain-5 (Anomaly Detection)</th>
+        <th colspan="6" class="group-rsna">RSNA (Full Set)</th>
       </tr>
       <tr>
         <th>STR</th>
         <th>GLI</th>
         <th>MEN</th>
         <th>MET</th>
-        <th>Mean</th>
+        <th><em>mean</em></th>
         <th>IPH</th>
         <th>IVH</th>
         <th>SAH</th>
         <th>SDH</th>
         <th>Any</th>
-        <th>Mean</th>
+        <th><em>mean</em></th>
       </tr>
     </thead>
     <tbody>

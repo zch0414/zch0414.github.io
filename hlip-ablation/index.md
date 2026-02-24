@@ -426,7 +426,7 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
   </table>
 </div>
 
-We evaluate this new model on Pub-Brain-5’s anomaly detection task and on the full RSNA dataset, demonstrating superior performance compared with the HLIP model in the original paper. **Note that these experiments are conducted under the zero-shot setting.**
+**"in the paper"** denotes HLIP models described in the original paper, while **"2025-10-08"** denotes an HLIP model aligned with the first version of this blog, trained using only sentence dropout. We evaluate all models on Pub-Brain-5’s anomaly detection task and on the full RSNA dataset, demonstrating superior performance compared with the HLIP model in the original paper. **Note that these experiments are conducted under the zero-shot setting.**
 
 ## Findings
 At the end of this blog post, we share several interesting findings and unsuccessful attempts from our experiments. We hope these observations provide new insights for researchers interested in this line of research.

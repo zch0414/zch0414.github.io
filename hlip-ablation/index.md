@@ -135,6 +135,10 @@ layout: null
     border-bottom: 1px solid #ddd;
   }
 
+  .paper-table tbody tr.thick-divider td {
+    border-bottom: 1.5px solid #222;
+  }
+
   .paper-table tbody tr:last-child td {
     border-bottom: 1.5px solid #222;
   }
@@ -338,7 +342,7 @@ All models are trained for 20 epochs on the combined BrainMRI220K and HeadCT240K
         <td>81.5</td>
         <td>85.7</td>
       </tr>
-      <tr>
+      <tr class="thick-divider">
         <td>2025-10-08</td>
         <td>89.1</td>
         <td>89.1</td>

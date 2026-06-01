@@ -273,7 +273,7 @@ Keeping all five subtle but meaningful changes, we train HLIP on the combined Br
 
 Image captions used in the original CLIP are short, often fewer than 60 words, whereas radiology reports are substantially longer, even when using an LLM-generated summary or the impression section. Motivated by this mismatch, we randomly select a single sentence at each training step during language–image pre-training. We find that this simple change yields a significant improvement. With this change, HLIP achieves **88.9** AUC on both head CT and brain MRI. We hypothesize that the gain stems from the limited representational capacity of the language model and the distribution shift between training (long text) and zero-shot evaluation (short prompts).
 
-### Daul contrastive loss
+### Dual contrastive loss
 
 <div class="figure-row">
   <div class="figure">

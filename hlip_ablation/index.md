@@ -529,7 +529,7 @@ We introduce four designs that we find do not provide benefits in our current se
   author = {Chenhui Zhao},
   title = {HLIP Ablation},
   year = {2026},
-  url = {https://zch0414.github.io/hlip-ablation/},
+  url = {https://zch0414.github.io/hlip_ablation/},
   note = {Accessed: 2026-02-23}
 }</code></pre>
 </div>

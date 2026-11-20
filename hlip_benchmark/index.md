@@ -81,7 +81,7 @@ The [HLIP ablation blog](/hlip_ablation/) raised concerns about the reliability 
 
 ## Main results
 
-| Dataset | Metric | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| Dataset | Metric | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | --- | ---: | ---: | ---: | ---: |
 | MR-RATE | Macro AUC across 70 findings (≥1 positive study) | 53.82% | 57.27% | 81.45% | **85.90%** |
 | MR-RATE | Macro AUC across 38 findings (≥32 positive studies) | 53.14% | 58.56% | 83.79% | **86.99%** |
@@ -116,7 +116,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 
 ## Appendix
 
-| MR-RATE | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| MR-RATE | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Subdural hematoma | 39 | 52.38% | 41.83% | 93.40% | 95.00% |
 | Epidural hematoma | 3 | 73.47% | 15.68% | 85.06% | 89.87% |
@@ -193,7 +193,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | Catheter | 17 | 43.71% | 36.09% | 94.03% | 92.89% |
 | Spine syrinx | 2 | 23.35% | 48.51% | 89.04% | 80.60% |
 
-| CTRG-Brain-263K | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| CTRG-Brain-263K | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Acute ischemic stroke | 149 | 42.13% | 57.28% | 51.98% | 69.91% |
 | Acute subdural hematoma | 139 | 75.93% | 89.90% | 93.22% | 98.03% |
@@ -278,7 +278,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | Traumatic subarachnoid hemorrhage | 193 | 76.79% | 88.47% | 93.73% | 97.68% |
 | Ventriculomegaly | 1,007 | 58.11% | 57.46% | 64.27% | 64.13% |
 
-| Open-Brain (balanced accuracy by pathology) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| Open-Brain (balanced accuracy by pathology) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Stroke | 247 | 0.00% | 61.54% | 51.42% | 80.16% |
 | Glioma | 3,119 | 19.59% | 93.59% | 89.45% | 89.07% |
@@ -287,7 +287,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | Schwannoma | 1,057 | 0.00% | 0.00% | 84.96% | 85.24% |
 | Multiple sclerosis | 145 | 99.31% | 43.45% | 78.62% | 63.45% |
 
-| Open-Brain (balanced accuracy by source) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| Open-Brain (balanced accuracy by source) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | isles | 247 | 0.00% | 61.54% | 51.42% | 80.16% |
 | brats_gli | 1,251 | 26.86% | 98.56% | 92.81% | 89.05% |
@@ -307,7 +307,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | ms_les_seg | 115 | 99.13% | 44.35% | 75.65% | 57.39% |
 | open_ms | 30 | 100.00% | 40.00% | 90.00% | 86.67% |
 
-| Open-Brain-Large (balanced accuracy by pathology) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| Open-Brain-Large (balanced accuracy by pathology) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Stroke | 63 | 0.00% | 77.78% | 68.25% | 95.24% |
 | Glioma | 1,585 | 33.63% | 95.77% | 95.46% | 93.19% |
@@ -316,7 +316,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | Schwannoma | 414 | 0.00% | 0.00% | 91.55% | 95.17% |
 | Multiple sclerosis | 44 | 100.00% | 65.91% | 90.91% | 90.91% |
 
-| Open-Brain-Large (balanced accuracy by source) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| Open-Brain-Large (balanced accuracy by source) | Studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | isles | 63 | 0.00% | 77.78% | 68.25% | 95.24% |
 | brats_gli | 625 | 47.04% | 100.00% | 97.76% | 93.44% |
@@ -336,7 +336,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | ms_les_seg | 29 | 100.00% | 65.52% | 89.66% | 89.66% |
 | open_ms | 15 | 100.00% | 66.67% | 93.33% | 93.33% |
 
-| CQ500 | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| CQ500 | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Intracranial hemorrhage (ICH) | 205 | 66.51% | 71.07% | 89.60% | 94.19% |
 | Intraparenchymal hemorrhage (IPH) | 134 | 77.11% | 76.09% | 88.56% | 93.99% |
@@ -350,7 +350,7 @@ Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentag
 | Mass effect | 127 | 57.38% | 40.86% | 95.04% | 96.58% |
 | Midline shift | 65 | 78.38% | 81.11% | 98.02% | 97.90% |
 
-| RSNA | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP (2026-02-09) |
+| RSNA | Positive studies | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Any intracranial hemorrhage | 8,882 | 71.17% | 67.00% | 92.58% | 94.26% |
 | Epidural hemorrhage | 354 | 65.20% | 70.20% | 81.44% | 83.30% |

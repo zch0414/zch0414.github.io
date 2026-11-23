@@ -79,6 +79,10 @@ This evaluation covers **40,119 studies across 5 groups**.
 
 The [HLIP ablation blog](/hlip_ablation/) raised concerns about the reliability of benchmarks assembled from multiple datasets for zero-shot classification. Scores can vary substantially even when only the training seed changes. In this post, we reproduce this variation on Pub-Brain-5 by training the same HLIP model (`clip_vit_base_scan_study_dualdinotxt1568`) on the same internal dataset with 3 different random seeds. We also evaluate the resulting 3 checkpoints on NeuroBench. We find that seed-to-seed variation is much smaller in all 5 NeuroBench groups than on Pub-Brain-5.
 
+## Implementation details
+
+All four models start from the same input. Each scan is stored as a `uint8` volume of shape `(48, 224, 224)` and processed with each model’s official data processor. BiomedCLIP and ConceptCLIP encode each slice independently, normalize its image embedding, and average these embeddings across all slices in the study to obtain a single study embedding. All four models use 18 prompt templates per class. For BiomedCLIP and ConceptCLIP, we explicitly specify “brain MRI” or “head CT” in each prompt to match the study modality.
+
 ## Main results
 
 | Dataset | Metric | BiomedCLIP | ConceptCLIP | ItemizedCLIP | HLIP |
@@ -93,8 +97,6 @@ The [HLIP ablation blog](/hlip_ablation/) raised concerns about the reliability 
 | Open-Brain-Large | Balanced accuracy by pathology | 44.02% | 55.65% | 70.35% | **72.07%** |
 | CQ500 | Macro AUC across 11 findings | 64.41% | 73.93% | 89.02% | **93.99%** |
 | RSNA | Macro AUC across 6 findings | 68.07% | 69.78% | 89.33% | **91.25%** |
-
-BiomedCLIP and ConceptCLIP use 18 templates per class with the prefix `This brain MRI study shows:` for MRI and `This head CT study shows:` for CT.
 
 The [Appendix](#appendix) reports results for each finding and source dataset.
 

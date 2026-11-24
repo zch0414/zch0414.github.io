@@ -67,7 +67,7 @@ layout: null
 
 2026-11-20 · Chenhui Zhao · MLiNS @ University of Michigan
 
-In [Neuro-VL](https://arxiv.org/abs/2611.15094), we assembled NeuroBench from 24 public datasets and used it primarily for visual question answering, report generation, and red-team evaluation. NeuroBench can also be used to evaluate zero-shot classification performance on neuroimaging studies. With Pub-Brain-5, an earlier benchmark for zero-shot classification of brain MRI studies, researchers must assemble the evaluation set from its original sources. With NeuroBench, researchers can download the images and classification labels directly from [Hugging Face](https://huggingface.co/datasets/mlinslab/neurobench) under the CC BY-NC-SA 4.0 license for noncommercial use. In this post, we report the full zero-shot classification results for [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224), [ConceptCLIP](https://huggingface.co/JerrryNie/ConceptCLIP), [ItemizedCLIP](https://github.com/MLNeurosurg/ItemizedCLIP), and [HLIP](https://huggingface.co/zch0414/clip-vit_large-slice_scan_study-dualdinotxt1568).
+In [Neuro-VL](https://arxiv.org/abs/2611.15094), we assembled NeuroBench from 24 public datasets and used it primarily for visual question answering, report generation, and red-team evaluation. NeuroBench can also be used to evaluate zero-shot classification performance on neuroimaging studies. With Pub-Brain-5, an earlier benchmark for zero-shot classification of brain MRI studies, researchers must assemble the evaluation set from its original sources. With NeuroBench, researchers can download the images and classification labels directly from [Hugging Face](https://huggingface.co/datasets/mlinslab/neurobench) under the CC BY-NC-SA 4.0 license for noncommercial use.
 
 This evaluation covers **40,119 studies across 5 groups**.
 
@@ -77,7 +77,7 @@ This evaluation covers **40,119 studies across 5 groups**.
 - **RSNA** includes 21,744 head CT studies with 6 hemorrhage labels. We use AUC.
 - **CQ500** includes 488 head CT studies with 11 finding labels. We use AUC.
 
-The [HLIP ablation blog](/hlip_ablation/) raised concerns about the reliability of benchmarks assembled from multiple datasets for zero-shot classification. Scores can vary substantially even when only the training seed changes. In this post, we reproduce this variation on Pub-Brain-5 by training the same HLIP model (`clip_vit_base_scan_study_dualdinotxt1568`) on the same internal dataset with 3 different random seeds. We also evaluate the resulting 3 checkpoints on NeuroBench. We find that seed-to-seed variation is much smaller in all 5 NeuroBench groups than on Pub-Brain-5.
+In this post, we first report the full zero-shot classification results for [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224), [ConceptCLIP](https://huggingface.co/JerrryNie/ConceptCLIP), [ItemizedCLIP](https://github.com/MLNeurosurg/ItemizedCLIP), and [HLIP](https://huggingface.co/zch0414/clip-vit_large-slice_scan_study-dualdinotxt1568). We then revisit a concern raised in the [HLIP ablation blog](/hlip_ablation/) that changing only the training seed can substantially affect zero-shot classification scores.
 
 ## Implementation details
 
@@ -102,6 +102,8 @@ The [Appendix](#appendix) reports results for each finding and source dataset.
 
 ## Training-seed robustness
 
+The [HLIP ablation blog](/hlip_ablation/) raised concerns about the reliability of Pub-Brain-5 for zero-shot classification. Scores can vary substantially even when only the training seed changes. In this post, we reproduce this variation on Pub-Brain-5 by training the same HLIP model (`clip_vit_base_scan_study_dualdinotxt1568`) on the same internal dataset with 3 different random seeds. We also evaluate the resulting 3 checkpoints on NeuroBench. We find that seed-to-seed variation is much smaller in all 5 NeuroBench groups than on Pub-Brain-5.
+
 | Dataset | Metric | Seed 0 | Seed 42 | Seed 40 | Δ (max − min) | Sample SD |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | **Pub-Brain-5** | **Balanced accuracy by pathology** | **63.88%** | **64.11%** | **58.26%** | **5.85%** | **3.31%** |
@@ -117,6 +119,8 @@ The [Appendix](#appendix) reports results for each finding and source dataset.
 | RSNA | Macro AUC across 6 findings | 89.56% | 88.93% | 88.64% | 0.92% | 0.47% |
 
 Across 3 training seeds, balanced accuracy by pathology varied by 5.85 percentage points on Pub-Brain-5. On Open-Brain, its closest counterpart in NeuroBench, the spread was 2.52 percentage points on the full cohort and 3.48 on Open-Brain-Large. Across all evaluable findings, the spread in macro AUC was 0.28 percentage points on MR-RATE, 2.58 on CTRG-Brain-263K, 1.05 on CQ500, and 0.92 on RSNA. We hope this lower seed-to-seed variation across all 5 groups helps address researchers’ concerns about how reliably NeuroBench reflects a model’s zero-shot classification ability.
+
+The variation across training seeds gives us a rough sense of how large a difference in performance might indicate an improvement. On Open-Brain, the gap between ItemizedCLIP and HLIP in balanced accuracy by pathology was smaller than the variation across seeds. On MR-RATE, CTRG-Brain-263K, CQ500, and RSNA, HLIP’s gains were larger than the observed seed variation.
 
 ## Appendix
 

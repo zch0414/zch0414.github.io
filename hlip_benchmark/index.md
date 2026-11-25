@@ -77,7 +77,7 @@ This evaluation covers **40,119 studies across 5 groups**.
 - **RSNA** includes 21,744 head CT studies with 6 hemorrhage labels. We use AUC.
 - **CQ500** includes 488 head CT studies with 11 finding labels. We use AUC.
 
-In this post, we first report the full zero-shot classification results for [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224), [ConceptCLIP](https://huggingface.co/JerrryNie/ConceptCLIP), [ItemizedCLIP](https://github.com/MLNeurosurg/ItemizedCLIP), and [HLIP](https://huggingface.co/zch0414/clip-vit_large-slice_scan_study-dualdinotxt1568). We then revisit a concern raised in the [HLIP ablation blog](/hlip_ablation/) that changing only the training seed can substantially affect zero-shot classification scores.
+In this post, we first report the full zero-shot classification results for [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224), [ConceptCLIP](https://huggingface.co/JerrryNie/ConceptCLIP), [ItemizedCLIP](https://github.com/MLNeurosurg/ItemizedCLIP), [HLIP-Base](https://huggingface.co/zch0414/clip-vit_base-slice_scan_study-dualdinotxt1568) and [HLIP-Large](https://huggingface.co/zch0414/clip-vit_large-slice_scan_study-dualdinotxt1568). We then revisit a concern raised in the [HLIP ablation blog](/hlip_ablation/) that changing only the training seed can substantially affect zero-shot classification scores.
 
 ## Implementation details
 
